@@ -16,11 +16,11 @@ render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
-      <Route path='admin' component={Admin} />
-      <Route path='genre/:genre' component={Genre}>
-        <Route path=':release' component={Release}/>
+      <Route path='/admin' component={Admin} />
+      <Route path='/genre/:genre' component={Genre}>
+        <Route path='/genre/:genre/:release' component={Release}/>
       </Route>
-      <Route path='list' component={List} />
+      <Route path='/list' component={List} />
     </Route>
     {/* для всех остальных роутов: показывай NotFound */}
     <Route path='*' component={NotFound} />
