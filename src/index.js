@@ -7,6 +7,7 @@ import Admin from './components/Admin'
 import BanList from './components/BanList'
 import Genre from './components/Genre'
 import Home from './components/Home'
+import NotFound from './components/NotFound'
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
@@ -19,6 +20,8 @@ render(
       </Route>
       <Route path='genre' component={Genre} />
     </Route>
+    {/* для всех остальных роутов: показывай NotFound */}
+    <Route path='*' component={NotFound} />
   </Router>,
   document.getElementById('root')
 )
