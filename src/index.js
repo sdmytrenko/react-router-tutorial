@@ -4,10 +4,10 @@ import { render } from 'react-dom'
 import App from './containers/App'
 
 import Admin from './components/Admin'
-import BanList from './components/BanList'
 import Genre from './components/Genre'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
+import List from './components/List'
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
@@ -15,10 +15,9 @@ render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
-      <Route path='admin' component={Admin} >
-        <Route path='banlist' component={BanList} />
-      </Route>
-      <Route path='genre' component={Genre} />
+      <Route path='admin' component={Admin} />
+      <Route path='genre/:genre' component={Genre} />
+      <Route path='list' component={List} />
     </Route>
     {/* для всех остальных роутов: показывай NotFound */}
     <Route path='*' component={NotFound} />

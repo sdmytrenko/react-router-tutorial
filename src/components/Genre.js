@@ -4,7 +4,8 @@ export default class Genre extends Component {
   render() {
     return (
       <div className='row'>
-        <div className='col-md-12'>Раздел /genre</div>
+        <h3 className='col-md-12'>{this.props.params.genre}</h3>
+        <div className='col-md-12'>Здесь будет список релизов</div>
       </div>
     )
   }
