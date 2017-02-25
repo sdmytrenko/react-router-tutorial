@@ -9,6 +9,7 @@ export default class App extends Component {
       <h1>App</h1>
       <ul>
         <li><Link to='/admin'>Admin</Link></li>
+        <li><Link to='/admin/banlist'>BanList</Link></li>
         <li><Link to='/genre'>Genre</Link></li>
       </ul>
         {/* добавили вывод потомков */}
