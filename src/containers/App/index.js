@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
-
-import './styles.scss'
+import NavLink from '../../components/NavLink'
 
 export default class App extends Component {
 
@@ -9,8 +7,8 @@ export default class App extends Component {
     return (
       <div className='container'>
         <ul className='nav nav-pills'>
-          <li><Link to='/admin' activeClassName='active'>Админка</Link></li>
-          <li><Link to='/list' activeClassName='active'>Список жанров</Link></li>
+          <li><NavLink to='/admin'>Админка</NavLink></li>
+          <li><NavLink to='/list'>Список жанров</NavLink></li>
         </ul>
         {/* добавили вывод потомков */}
         {this.props.children}
